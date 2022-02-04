@@ -22,11 +22,13 @@
         {{ end }}
     {{ end }}
     
-    {{ if .Page.Site.Params.homepage }}
-        &#183; 
-        <a href="{{ .Site.Home | relURL }}">
-            {{ .Page.Site.Params.homepage }}
-        </a>
+    {{ if .show_home_menu_item }}
+        {{ if .Page.Site.Params.homepage }}
+            &#183; 
+            <a href="{{ .Site.Home | relURL }}">
+                {{ .Page.Site.Params.homepage }}
+            </a>
+        {{ end }}
     {{ end }}
 {{ end }}
 </p>

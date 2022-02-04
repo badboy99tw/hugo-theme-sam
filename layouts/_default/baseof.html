@@ -31,7 +31,7 @@
         {{ block "bottom-menu" . }}
         {{ if .Site.Params.mainMenu }}
         <nav role="navigation" class="flex-container bottom-menu">
-            {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}
+            {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false "show_home_menu_item" true) }}
         </nav>
         {{ end }}
         {{ end }}
