@@ -1,5 +1,11 @@
 {{ define "section_content" }}
 <div class="flex-container">
+    {{ if .Params.showLastmod }}
+    <aside role="complementary">
+        Lastmod: {{ .Lastmod.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") }}
+    </aside>
+    <hr />
+    {{ end }}
     <article role="article">
         {{ .Content }}
     </article>
