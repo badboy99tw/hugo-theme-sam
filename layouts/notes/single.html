@@ -14,6 +14,6 @@
 
 {{ define "bottom-menu" }}
 <nav role="navigation" class="flex-container bottom-menu">
-    {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" true "show_home_menu_item" true) }}
+    {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false "show_home_menu_item" true) }}
 </nav>
 {{ end }}
