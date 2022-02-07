@@ -7,24 +7,18 @@
 </head>
 
 <body>
-    <nav role="navigation" class="flex-container" id="splash">
+    <main class="flex-container profile" id="splash">
+        {{ if .Site.Params.profile }}
+        {{ partial "profile.html" (dict "profile" .Site.Params.profile "title" .Title) }}
+        {{ end }}
 
         {{ if .Site.Params.mainMenu }}
-        {{ range .Site.Params.mainMenu }}
-            <a href="{{.link}}" class="big-link">
-                {{.text}}
-            </a>
+        <nav role="navigation" class="flex-container bottom-menu">
+            {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false "show_home_menu_item" false) }}
+        </nav>
         {{ end }}
-
-        {{ else }}
-        {{ range .Site.Sections }}
-            <a href="{{.RelPermalink}}" class="big-link">
-                {{.Title | markdownify}}
-            </a>
-        {{ end }}
-        {{ end }}
-
-    </nav>
+    </main> 
+    <footer class="flex-container footer">{{ partial "footer.html" . }}</footer>
 </body>
 
 </html>
