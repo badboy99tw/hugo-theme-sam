@@ -1,15 +1,6 @@
 # [Call me Sam: a theme for Hugo](https://victoria.dev/hugo-theme-sam/)
 
-![Test Hugo versions](https://github.com/victoriadrake/hugo-theme-sam/workflows/test-versions/badge.svg)
-![Latest Release](https://img.shields.io/github/tag/victoriadrake/hugo-theme-sam.svg)
-
-![Main page screenshot](https://github.com/victoriadrake/hugo-theme-sam/blob/master/images/screenshot.png)
-
-Sam is a Simple and Minimalist theme for Hugo. It lets you categorize and showcase your content the way you want to.
-
-Focused on content and typography, the stylized index page is really just a list of navigation links that you can set in your `config.toml`. This versatile design is limited only by your imagination, as you can make it say anything you like. Here are some ideas.
-
-![Index page iterations.](https://github.com/victoriadrake/hugo-theme-sam/blob/master/images/ideas.png)
+![Main page screenshot](images/screenshot.png)
 
 ## Features
 
@@ -50,13 +41,13 @@ If you're new to Node.js and npm, [learn how to install and use npm here](https:
 Run from the root of your Hugo site:
 
 ```sh
-git clone https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
+git clone https://github.com/badboy99tw/hugo-theme-sam.git themes/sam
 ```
 
 Alternatively you can include this repository as a [git submodule](https://git-scm.com/book/de/v1/Git-Tools-Submodule). This makes it easier to update this theme if you have your Hugo site in git as well. For this you need to run:
 
 ```sh
-git submodule add https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
+git submodule add https://github.com/badboy99tw/hugo-theme-sam.git themes/sam
 ```
 
 ### 2. Configure your site
@@ -177,7 +168,7 @@ You can run the built-in server to preview the site as you make changes to the S
 
 ## Issues
 
-If you have a question or get stuck, please [open an issue](https://github.com/victoriadrake/hugo-theme-sam/issues) for help and to help those who come after you. The more information you can provide, the better!
+If you have a question or get stuck, please [open an issue](https://github.com/badboy99tw/hugo-theme-sam/issues) for help and to help those who come after you. The more information you can provide, the better!
 
 ## Contributing
 
