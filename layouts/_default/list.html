@@ -21,13 +21,18 @@
     {{ end }}
     {{ else }}
     <ul>
-        {{ range .Data.Pages }}
+        {{ $pages := slice }}
+        {{ range .Pages }}
+            {{ $titleLower := lower .Title }}
+            {{ $pages = $pages | append (dict "titleLower" $titleLower "page" .) }}
+        {{ end }}
+        {{ range sort $pages ".titleLower" }}
         <li>
-            {{ if .Params.showDate }}
-            {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
+            {{ if .page.Params.showDate }}
+            {{ .page.Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
             {{ end }}
-            <a href="{{.RelPermalink}}">
-                {{.Title | markdownify}}
+            <a href="{{ .page.RelPermalink }}">
+                {{ .page.Title | markdownify }}
             </a>
         </li>
         {{ end }}
