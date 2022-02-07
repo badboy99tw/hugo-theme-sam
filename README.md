@@ -46,13 +46,6 @@ npm i -g postcss postcss-cli autoprefixer
 
 If you're new to Node.js and npm, [learn how to install and use npm here](https://www.npmjs.com/get-npm). It is recommended that you use a version manager for your Node.js installation, such as [`nvm`](https://github.com/nvm-sh/nvm).
 
-Note: If you are using [Hugo as a snap app](https://snapcraft.io/hugo), the above two Node.js packages have to be [installed locally inside `exampleSite`](https://gohugo.io/hugo-pipes/postcss/).
-
-```sh
-cd exampleSite/
-npm i postcss postcss-cli autoprefixer
-```
-
 ## 1. Get the theme
 
 Run from the root of your Hugo site:
@@ -69,7 +62,7 @@ git submodule add https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
 
 ### 2. Configure your site
 
-From the exampleSite, copy `config.toml` to the root folder of your Hugo site and change the fields as you like. There are helpful hints in the file.
+From the [example site](https://github.com/badboy99tw/akhun.co), copy `config.toml` to the root folder of your Hugo site and change the fields as you like. There are helpful hints in the file.
 
 ### 3. Create pages
 
