@@ -1,6 +1,6 @@
 {{ $data := newScratch }}
 {{ $data.Set "inner" .Inner }}
-{{ $names := findRE "\\[\\[([^ ]*)\\]\\]" .Inner }}
+{{ $names := findRE "\\[\\[(.*?)\\]\\]" .Inner }}
 {{ range $names }}
     {{ $obsidianInternalLink := replace (replace . "[[" "") "]]" "" }}
     {{ if (gt (len $obsidianInternalLink) 0) }}
@@ -13,7 +13,7 @@
         {{ $parts := split $obsidianLink "#" }}
         {{ $file := printf "%s.md" (index $parts 0) }}
         {{ $heading := cond (eq (len $parts) 2) (printf "#%s" (index $parts 1)) "" }}
-        {{ $permalink := relref $.Page (printf "%s%s" $file $heading) }}
+        {{ $permalink := replace (relref $.Page (printf "%s%s" $file $heading)) " " "-" }}
 
         {{/* replace by markdown link format */}}
         {{ $markdownLink := printf "[%s](%s)" $name $permalink }}
