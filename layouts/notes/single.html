@@ -6,7 +6,10 @@
     </aside>
     <hr />
     {{ end }}
-    <article role="article">
+    <article role="article"
+        {{ if .Params.cssclass }}
+            class="{{ .Params.cssclass }}"
+        {{ end }}>
         {{ .Content }}
     </article>
 </div>
